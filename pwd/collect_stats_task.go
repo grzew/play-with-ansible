@@ -7,8 +7,8 @@ import (
 
 	dockerTypes "github.com/docker/docker/api/types"
 	units "github.com/docker/go-units"
-	"github.com/play-with-docker/play-with-docker/docker"
-	"github.com/play-with-docker/play-with-docker/pwd/types"
+	"github.com/turkenh/play-with-ansible/docker"
+	"github.com/turkenh/play-with-ansible/pwd/types"
 )
 
 type collectStatsTask struct {

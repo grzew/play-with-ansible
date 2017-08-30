@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/gorilla/securecookie"
-	"github.com/play-with-docker/play-with-docker/config"
+	"github.com/turkenh/play-with-ansible/config"
 	"github.com/twinj/uuid"
 )
 

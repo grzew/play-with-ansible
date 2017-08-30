@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/play-with-docker/play-with-docker/config"
-	"github.com/play-with-docker/play-with-docker/docker"
-	"github.com/play-with-docker/play-with-docker/pwd/types"
+	"github.com/turkenh/play-with-ansible/config"
+	"github.com/turkenh/play-with-ansible/docker"
+	"github.com/turkenh/play-with-ansible/pwd/types"
 
 	"golang.org/x/text/encoding"
 )

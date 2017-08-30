@@ -1,6 +1,6 @@
 package pwd
 
-import "github.com/play-with-docker/play-with-docker/pwd/types"
+import "github.com/turkenh/play-with-ansible/pwd/types"
 
 type mockTasks struct {
 	schedule   func(s *types.Session)

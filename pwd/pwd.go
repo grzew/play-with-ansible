@@ -4,9 +4,9 @@ import (
 	"io"
 	"time"
 
-	"github.com/play-with-docker/play-with-docker/docker"
-	"github.com/play-with-docker/play-with-docker/pwd/types"
-	"github.com/play-with-docker/play-with-docker/storage"
+	"github.com/turkenh/play-with-ansible/docker"
+	"github.com/turkenh/play-with-ansible/pwd/types"
+	"github.com/turkenh/play-with-ansible/storage"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

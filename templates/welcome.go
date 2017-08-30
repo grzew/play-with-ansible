@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"html/template"
 
-	"github.com/play-with-docker/play-with-docker/recaptcha"
+	"github.com/turkenh/play-with-ansible/recaptcha"
 )
 
 func GetWelcomeTemplate() ([]byte, error) {

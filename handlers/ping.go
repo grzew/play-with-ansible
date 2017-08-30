@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/play-with-docker/play-with-docker/config"
+	"github.com/turkenh/play-with-ansible/config"
 	"github.com/shirou/gopsutil/load"
 )
 

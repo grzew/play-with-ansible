@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/miekg/dns"
-	"github.com/play-with-docker/play-with-docker/config"
+	"github.com/turkenh/play-with-ansible/config"
 )
 
 func DnsRequest(w dns.ResponseWriter, r *dns.Msg) {

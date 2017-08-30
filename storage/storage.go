@@ -1,6 +1,6 @@
 package storage
 
-import "github.com/play-with-docker/play-with-docker/pwd/types"
+import "github.com/turkenh/play-with-ansible/pwd/types"
 
 const notFound = "NotFound"
 

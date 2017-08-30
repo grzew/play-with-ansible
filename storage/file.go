@@ -7,7 +7,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/play-with-docker/play-with-docker/pwd/types"
+	"github.com/turkenh/play-with-ansible/pwd/types"
 )
 
 type storage struct {

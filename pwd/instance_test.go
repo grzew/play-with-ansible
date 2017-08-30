@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/play-with-docker/play-with-docker/config"
-	"github.com/play-with-docker/play-with-docker/docker"
-	"github.com/play-with-docker/play-with-docker/pwd/types"
+	"github.com/turkenh/play-with-ansible/config"
+	"github.com/turkenh/play-with-ansible/docker"
+	"github.com/turkenh/play-with-ansible/pwd/types"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -58,7 +58,7 @@ func TestInstanceNew(t *testing.T) {
 
 	assert.Nil(t, err)
 
-	instance, err := p.InstanceNew(session, InstanceConfig{Host: "something.play-with-docker.com"})
+	instance, err := p.InstanceNew(session, InstanceConfig{Host: "something.play-with-ansible.com"})
 
 	assert.Nil(t, err)
 
@@ -84,7 +84,7 @@ func TestInstanceNew(t *testing.T) {
 		ServerKey:     nil,
 		CACert:        nil,
 		Privileged:    true,
-		HostFQDN:      "something.play-with-docker.com",
+		HostFQDN:      "something.play-with-ansible.com",
 	}
 	assert.Equal(t, expectedContainerOpts, containerOpts)
 }

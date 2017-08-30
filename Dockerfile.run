@@ -3,10 +3,10 @@ FROM alpine
 RUN apk --update add ca-certificates
 RUN mkdir -p /app/pwd
 
-ADD play-with-docker /app/play-with-docker
+ADD play-with-ansible /app/play-with-ansible
 COPY ./www /app/www
 
 WORKDIR /app
-CMD ["./play-with-docker"]
+CMD ["./play-with-ansible"]
 
 EXPOSE 3000

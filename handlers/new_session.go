@@ -8,8 +8,8 @@ import (
 	"path"
 	"strings"
 
-	"github.com/play-with-docker/play-with-docker/config"
-	"github.com/play-with-docker/play-with-docker/recaptcha"
+	"github.com/turkenh/play-with-ansible/config"
+	"github.com/turkenh/play-with-ansible/recaptcha"
 )
 
 type NewSessionResponse struct {
@@ -73,7 +73,7 @@ func formatStack(stack string) string {
 	}
 	if strings.HasPrefix(stack, "/") {
 		// The host is anonymous, then use our own stack repo.
-		stack = fmt.Sprintf("%s%s", "https://raw.githubusercontent.com/play-with-docker/stacks/master", stack)
+		stack = fmt.Sprintf("%s%s", "https://raw.githubusercontent.com/play-with-ansible/stacks/master", stack)
 	}
 	return stack
 }

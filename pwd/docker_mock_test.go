@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/docker/docker/api/types"
-	"github.com/play-with-docker/play-with-docker/docker"
+	"github.com/turkenh/play-with-ansible/docker"
 )
 
 type mockDocker struct {

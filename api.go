@@ -10,9 +10,9 @@ import (
 	gh "github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	"github.com/miekg/dns"
-	"github.com/play-with-docker/play-with-docker/config"
-	"github.com/play-with-docker/play-with-docker/handlers"
-	"github.com/play-with-docker/play-with-docker/templates"
+	"github.com/turkenh/play-with-ansible/config"
+	"github.com/turkenh/play-with-ansible/handlers"
+	"github.com/turkenh/play-with-ansible/templates"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/urfave/negroni"
 )

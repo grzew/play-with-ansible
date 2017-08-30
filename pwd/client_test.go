@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/play-with-docker/play-with-docker/pwd/types"
+	"github.com/turkenh/play-with-ansible/pwd/types"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -257,8 +257,6 @@ func (p *pwd) InstanceAllowedImages() []string {
 
 	return []string{
 		config.GetDindImageName(),
-		"franela/dind:overlay2-dev",
-		"franela/ucp:2.4.1",
 	}
 
 }

@@ -37,7 +37,7 @@ func ParseFlags() {
 }
 func GetDindImageName() string {
 	dindImage := os.Getenv("DIND_IMAGE")
-	defaultDindImageName := "franela/dind"
+	defaultDindImageName := "turkenh/dind-ansible"
 	if len(dindImage) == 0 {
 		dindImage = defaultDindImageName
 	}

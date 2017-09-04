@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/stretchr/testify/assert"
 	"github.com/turkenh/play-with-ansible/config"
 	"github.com/turkenh/play-with-ansible/docker"
 	"github.com/turkenh/play-with-ansible/pwd/types"
-	"github.com/stretchr/testify/assert"
 )
 
 func TestInstanceResizeTerminal(t *testing.T) {
@@ -235,7 +235,7 @@ func TestInstanceAllowedImages(t *testing.T) {
 
 	p := NewPWD(dock, tasks, broadcast, storage)
 
-	expectedImages := []string{config.GetDindImageName(), "franela/dind:overlay2-dev", "franela/ucp:2.4.1"}
+	expectedImages := []string{config.GetDindImageName()}
 
 	assert.Equal(t, expectedImages, p.InstanceAllowedImages())
 }

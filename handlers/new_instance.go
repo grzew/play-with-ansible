@@ -19,6 +19,11 @@ func NewInstance(rw http.ResponseWriter, req *http.Request) {
 
 	s := core.SessionGet(sessionId)
 
+	if len(s.Instances) == 0 {
+		// First image is tutorial image
+		body.ImageName = "turkenh/dind-ansible-tutor"
+	}
+
 	if len(s.Instances) >= 5 {
 		rw.WriteHeader(http.StatusConflict)
 		return

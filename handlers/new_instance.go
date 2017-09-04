@@ -21,7 +21,7 @@ func NewInstance(rw http.ResponseWriter, req *http.Request) {
 
 	if len(s.Instances) == 0 {
 		// First image is tutorial image
-		body.ImageName = "turkenh/dind-ansible-tutor"
+		body.ImageName = "turkenh/dind-ansible-tutorial"
 	}
 
 	if len(s.Instances) >= 5 {

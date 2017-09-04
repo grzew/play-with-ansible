@@ -1,6 +1,6 @@
 lesson_name("Introduction to ansible")
 
-"Hello, welcome to ansible playground!"
+"Hello, welcome to the Ansible Playground!"
 
 "This is an introductory tutorial to make you familiar with `ansible`."
 
@@ -20,41 +20,44 @@ prompt {
 prompt {
     if success && command =~ "^ansible --version" {
         expect("ansible --version")
-        "Great, we are ready to start!"
+        "Great, ansible is already installed and we are ready to start!"
         break
     }
 }
 make_home
+
+"Let's start with the inventory."
 
 "Ansible uses `inventory files` to access multiple nodes in your infrastructure at the same time. Inventory file is nothing but a text file with the connection info to your nodes. Default path for inventory files is `/etc/ansible/hosts` but you can always specify an inventory file with `-i` flag."
 "I've just created an inventory file for you, named as `hosts`. Please run *cat hosts* to see the content of your first inventory file"
 
 prompt {
     if success && command =~ "^cat hosts" {
-        "Here you can see an inventory group named `mylocal` and a host as `localhost` with connection type of `local`. Default connection type in ansible is `ssh` and we have one more namely `docker`. Here we used `local` since we start by running ansible tasks on the local machine by using a `local` connection."
+        "Here you can see an inventory group named `mylocal` and a host as `localhost` with connection type of `local`. Default connection type in ansible is `ssh` and we have one more type, namely `docker`. Here we used `local` since we start by running ansible tasks on the local machine by using a `local` connection."
         break
     }
 }
 
 enter_to_continue
 
-"Ansible has two different types of commands, namely ad hoc tasks and playbooks."
+"Ansible has two different types of commands, namely ad hoc and playbooks."
 
-"You can think ad hoc tasks as building pieces of playbooks. In other words, in a `playbook` definition (.yaml file), you specify your tasks consecutively, on the other hand you run a single task per `ad hoc` command"
+"You can think ad hoc tasks as building pieces of playbooks. In other words, in a `playbook` definition (.yaml file), you specify your tasks consecutively, on the other hand you run a single task per `ad hoc` command."
 
 "Let's start with an ad hoc command which will check the ansible connection to the localhost machine."
+
 "Please run *ansible -i hosts -m ping mylocal*"
 
 prompt {
     if success && command =~ `^ansible -i hosts -m ping mylocal` {
-        "Perfect, we just run our first ansible task and succesfully tested ansible connection on the local machine. We provided the previously created inventory file with `-i` flag and specified the group to run command as `mylocal`"
+        "Perfect, we just run our first ansible task and succesfully tested ansible connection on the local machine. We provided the previously created inventory file with `-i` flag and specified the group to run command as `mylocal`."
         break
     }
 }
 
 enter_to_continue
 
-"In an ad hoc task, you basically specify the `module` (ping, shell, apk, ...) you want to use with `-m` and the `arguments` with `-a` to that module. In the previous command we used `ping` module which does not require any argument."
+"In an ad hoc task, you basically specify the `module` (ping, shell, apk, ...) you want to use with `-m` and the `arguments` with `-a` to that module. In the previous command we used `ping` module which does not require any arguments."
 
 "Let's try the `shell` module."
 "Please run: *ansible -i hosts -m shell -a \"hostname -s\" mylocal* "
@@ -108,7 +111,7 @@ enter_to_continue
 
 prompt {
     if success && command == `ansible -i hosts -m ping nodes` {
-        "Great, we could execute our first remote ansible task. As you can see it is not that different that running for the local machine."
+        "Great, we could execute our first remote ansible task. As you can see, it is not that different than running for the local machine."
         break
     }
 }

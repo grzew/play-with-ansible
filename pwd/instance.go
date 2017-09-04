@@ -257,6 +257,7 @@ func (p *pwd) InstanceAllowedImages() []string {
 
 	return []string{
 		config.GetDindImageName(),
+		"turkenh/dind-ansible-tutorial",
 	}
 
 }

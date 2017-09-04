@@ -58,10 +58,6 @@ RUN mkdir -p /var/run/pwd/certs && mkdir -p /var/run/pwd/uploads \
     && mkdir ~/.ssh && ssh-keygen -N "" -t rsa -f ~/.ssh/id_rsa \
     && cat ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys
 
-ARG START_WITH_TUTORIAL
-ENV START_WITH_TUTORIAL ${START_WITH_TUTORIAL}
-RUN echo "${START_WITH_TUTORIAL}"
-
 # Remove IPv6 alias for localhost and start docker in the background ...
 CMD cat /etc/hosts >/etc/hosts.bak && \
     sed 's/^::1.*//' /etc/hosts.bak > /etc/hosts && \
@@ -75,5 +71,6 @@ CMD cat /etc/hosts >/etc/hosts.bak && \
     echo "root:root" | chpasswd &> /dev/null && \
     /usr/sbin/sshd -o PermitRootLogin=yes -o PrintMotd=no 2>/dev/null && \
     dockerd &>/docker.log & \
-    while true ; do script -q -c "if [ -n "${START_WITH_TUTORIAL}" ]; then /usr/lib/nutsh run /ansible-tutorial; fi; /bin/bash -l" /dev/null ; done
+    script -q -c "/usr/lib/nutsh run /ansible-tutorial" /dev/null && \
+    while true ; do script -q -c "/bin/bash -l" /dev/null ; done
 # ... and then put a shell in the foreground, restarting it if it exits

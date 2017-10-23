@@ -7,8 +7,6 @@ Under the hood DIND or Docker-in-Docker is used to give the effect of multiple V
 
 Play With Ansible is a fork of Play With Docker and comes with ansible pre-installed containers to play with ansible online.
 
-A live version is available at: http://play.ansible.online
-
 ## Requirements
 
 Docker 1.13+ is required. 
